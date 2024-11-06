@@ -1,0 +1,160 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\AngryBirds\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{95A252A3-FF21-A6B8-5A69-5247B4E038BD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\\u043C\u043E\u044F \u0431\u0430\u0437\u0430\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\unity\\angrybirds\\assets\\scripts\\displayscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95A252A3-FF21-A6B8-5A69-5247B4E038BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\displayscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95A252A3-FF21-A6B8-5A69-5247B4E038BD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\\u043C\u043E\u044F \u0431\u0430\u0437\u0430\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\unity\\angrybirds\\assets\\scripts\\birdscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95A252A3-FF21-A6B8-5A69-5247B4E038BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\birdscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95A252A3-FF21-A6B8-5A69-5247B4E038BD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\\u043C\u043E\u044F \u0431\u0430\u0437\u0430\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\unity\\angrybirds\\assets\\scripts\\arrowscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95A252A3-FF21-A6B8-5A69-5247B4E038BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\arrowscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95A252A3-FF21-A6B8-5A69-5247B4E038BD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\\u043C\u043E\u044F \u0431\u0430\u0437\u0430\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\unity\\angrybirds\\assets\\scripts\\forceindicatorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95A252A3-FF21-A6B8-5A69-5247B4E038BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\forceindicatorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DisplayScript.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\AngryBirds\\Assets\\Scripts\\DisplayScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DisplayScript.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\AngryBirds\\Assets\\Scripts\\DisplayScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DisplayScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T09:53:58.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BirdScript.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\AngryBirds\\Assets\\Scripts\\BirdScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BirdScript.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\AngryBirds\\Assets\\Scripts\\BirdScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BirdScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T09:51:52.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ArrowScript.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\AngryBirds\\Assets\\Scripts\\ArrowScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ArrowScript.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\AngryBirds\\Assets\\Scripts\\ArrowScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ArrowScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T09:51:48.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ForceIndicatorScript.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\AngryBirds\\Assets\\Scripts\\ForceIndicatorScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ForceIndicatorScript.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\AngryBirds\\Assets\\Scripts\\ForceIndicatorScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ForceIndicatorScript.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T09:44:27.62Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
