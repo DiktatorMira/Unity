@@ -13,7 +13,7 @@ public class BirdScript : MonoBehaviour {
         hasFlown = false;
     }
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space) && !hasFlown) {
+        if (Input.GetKeyDown(KeyCode.Space) && !hasFlown && !ModalScript.isMenu) {
             float forceAmplitude = minForce + (maxForce - minForce) * ForceIndicatorScript.forceFactor;
             rb2d.AddForce(arrow.right * forceAmplitude);
             hasFlown = true;

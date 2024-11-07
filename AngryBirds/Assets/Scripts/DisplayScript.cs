@@ -19,6 +19,5 @@ public class DisplayScript : MonoBehaviour {
             int tenths = Mathf.FloorToInt((gameTime * 10) % 10);
             clockTMP.text = $"{hours:D2}:{minutes:D2}:{seconds:D2}.{tenths}";
         }
-        if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
