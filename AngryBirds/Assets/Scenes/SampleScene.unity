@@ -252,6 +252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneBar (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7624418786783265005, guid: 8747e92e9200026478d2aa090cbd8ec7, type: 3}
+      propertyPath: m_TagString
+      value: PigDestroy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -572,7 +576,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 295399133}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2035493947}
+        m_TargetAssemblyTypeName: ModalScript, Assembly-CSharp
+        m_MethodName: OnGoButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &295399133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,6 +743,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockTMP: {fileID: 0}
+  gameTime: 0
+  levelTimeout: 0
 --- !u!1 &300740655
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +943,7 @@ GameObject:
   - component: {fileID: 424130704}
   m_Layer: 0
   m_Name: Pig
-  m_TagString: NoCloud
+  m_TagString: PigDestroy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2767,7 +2785,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041C\u0435\u043D\u044E"
+  m_text: "\u041F\u0410\u0423\u0417\u0410"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -3118,7 +3136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3740630512324056112, guid: bb2e97f43090bc3448701ceae7481d86, type: 3}
       propertyPath: m_TagString
-      value: NoCloud
+      value: PigDestroy
       objectReference: {fileID: 0}
     - target: {fileID: 6528730439299061682, guid: bb2e97f43090bc3448701ceae7481d86, type: 3}
       propertyPath: m_Size.y
@@ -3831,6 +3849,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 130148160}
+  title_tmp: {fileID: 1218151190}
+  messageTMP: {fileID: 692632071}
+  buttonLabelTMP: {fileID: 2091984032}
 --- !u!114 &2035493948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4219,7 +4240,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2091376670}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2035493947}
+        m_TargetAssemblyTypeName: ModalScript, Assembly-CSharp
+        m_MethodName: OnExitButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2091376670
 MonoBehaviour:
   m_ObjectHideFlags: 0

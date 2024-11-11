@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 public class DisplayScript : MonoBehaviour {
     [SerializeField]
     private TMPro.TextMeshProUGUI clockTMP;
-    private float gameTime;
+    [SerializeField]
+    private float gameTime, levelTimeout = 15f;
 
     void Start() {
         clockTMP = GameObject.Find("ClockTMP").GetComponent<TMPro.TextMeshProUGUI>();
