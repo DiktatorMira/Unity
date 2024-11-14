@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CC6558E0-F097-8A72-E520-46AB642BF90E}</ProjectGuid>
+    <ProjectGuid>{CBEE44B2-AC02-2D81-086E-310C52B2BE1D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,6 +63,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Free Skyboxes - Space\Readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

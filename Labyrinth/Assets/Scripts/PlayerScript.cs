@@ -2,8 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class NewMonoBehaviourScript : MonoBehaviour {
-    [SerializeField]
-    private float forceFactor = 1.5f;
+    [SerializeField] private float forceFactor = 1.5f;
     private InputAction moveAction;
     private Rigidbody rb;
 
@@ -13,6 +12,9 @@ public class NewMonoBehaviourScript : MonoBehaviour {
     }
     void Update() {
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
-        rb.AddForce(forceFactor * new Vector3(moveValue.x, 0.0f, moveValue.y));
+        Vector3 correctedForward = Camera.main.transform.forward;
+        correctedForward.y = 0.0f;
+        correctedForward.Normalize();
+        rb.AddForce(forceFactor * Camera.main.transform.right * moveValue.x + correctedForward * moveValue.y);
     }
 }
