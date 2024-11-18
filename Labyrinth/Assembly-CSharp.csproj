@@ -62,10 +62,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+    <Compile Include="Assets\Scripts\LightScript.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Free Skyboxes - Space\Readme.txt" />
+    <None Include="Assets\ClassicSpace\Classic Space Skybox Readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
