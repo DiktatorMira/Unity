@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class NewMonoBehaviourScript : MonoBehaviour {
-    [SerializeField] private float forceFactor = 1.5f;
+    [SerializeField] private float forceFactor = 2.0f;
     private InputAction moveAction;
     private Rigidbody rb;
 

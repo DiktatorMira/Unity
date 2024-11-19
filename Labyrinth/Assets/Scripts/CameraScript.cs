@@ -7,7 +7,7 @@ public class CameraScript : MonoBehaviour {
     private InputAction lookAction;
     private Vector3 c;
     private bool fpv = true;
-    private float mX, mY, sensitivityX = 10.0f, sensitivityY = 10.0f, sensitivityW = 0.1f, fpvRange = 0.6f, maxDistance = 5.0f;
+    private float mX, mY, sensitivityX = 2.5f, sensitivityY = 2.5f, sensitivityW = 0.1f, fpvRange = 0.6f, maxDistance = 5.0f;
     
     void Start() {
         c = transform.position - player.transform.position;
@@ -21,9 +21,15 @@ public class CameraScript : MonoBehaviour {
             if (mouseWheel.y != 0) {
                 if (c.magnitude > fpvRange) {
                     c = c * (1 + mouseWheel.y * sensitivityW);
-                    if (c.magnitude < fpvRange) c = c * 0.01f;
+                    if (c.magnitude < fpvRange) {
+                        c = c * 0.01f;
+                        GameState.isFpv = true;
+                    }
                 } else {
-                    if (mouseWheel.y > 0) c = c / c.magnitude * 1.1f;
+                    if (mouseWheel.y > 0) {
+                        c = c / c.magnitude * 1.1f;
+                        GameState.isFpv = false;
+                    }
                 }
                 if (c.magnitude > maxDistance) c = c.normalized * maxDistance;
             }
