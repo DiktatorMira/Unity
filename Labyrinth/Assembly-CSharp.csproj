@@ -62,10 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+    <Compile Include="Assets\Scripts\KeyCollectScript.cs" />
     <Compile Include="Assets\Scripts\BatteryScript.cs" />
     <Compile Include="Assets\Scripts\LightScript.cs" />
     <Compile Include="Assets\Scripts\FlashScript.cs" />
+    <Compile Include="Assets\Scripts\KeyPointScript.cs" />
     <Compile Include="Assets\Scripts\CharacterScript.cs" />
+    <Compile Include="Assets\Scripts\KeyIndicatorScript.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
     <Compile Include="Assets\Scripts\GameState.cs" />
   </ItemGroup>

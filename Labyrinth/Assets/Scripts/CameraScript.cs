@@ -7,7 +7,7 @@ public class CameraScript : MonoBehaviour {
     private InputAction lookAction;
     private Vector3 c;
     private bool fpv = true;
-    private float mX, mY, sensitivityX = 2.5f, sensitivityY = 2.5f, sensitivityW = 0.1f, fpvRange = 0.6f, maxDistance = 5.0f;
+    private float mX, mY, sensitivityX = 3.5f, sensitivityY = 3.5f, sensitivityW = 0.35f, fpvRange = 0.6f, maxDistance = 5.0f;
     
     void Start() {
         c = transform.position - player.transform.position;
