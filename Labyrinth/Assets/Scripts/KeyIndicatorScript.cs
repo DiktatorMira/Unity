@@ -28,10 +28,8 @@ public class KeyIndicatorScript : MonoBehaviour {
         }
         if (parentScript.isKeyGot) Destroy(gameObject);
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.name == "Player")
-        {
+    private void OnTriggerEnter(Collider other) {
+        if (other.name == "Player" && !content.activeInHierarchy) {
             content.SetActive(true);
             activeTime = 0.0f;
         }
