@@ -4,11 +4,13 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour {
     private bool isOpen, isLocked;
     private float inTime = 2.0f, OutTime = 20.0f, openTime;
+    AudioSource[] audioSources;
 
     void Start() {
         isLocked = true;
         isOpen = false;
         openTime = 0.0f;
+        audioSources = GetComponents<AudioSource>();
     }
     void Update() {
         if (openTime > 0.0f && !isLocked && !isOpen) {
@@ -23,6 +25,10 @@ public class DoorScript : MonoBehaviour {
             openTime = isInTime ? inTime : OutTime;
             isLocked = false;
             ToastScript.ShowToast("Дверь открыта " + (isInTime ? "вовремя" : "не вовремя"));
-        } else ToastScript.ShowToast("Для открытия двери необходим ключ \"1\"!");
+            (isInTime ? audioSources[1] : audioSources[2]).Play();
+        } else {
+            ToastScript.ShowToast("Для открытия двери необходим ключ \"1\"!");
+            audioSources[0].Play();
+        }
     }
 }
