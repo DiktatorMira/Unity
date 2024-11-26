@@ -4,7 +4,7 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour {
     private bool isOpen, isLocked;
     private float inTime = 2.0f, OutTime = 20.0f, openTime;
-    AudioSource[] audioSources;
+    private AudioSource[] audioSources;
 
     void Start() {
         isLocked = true;
