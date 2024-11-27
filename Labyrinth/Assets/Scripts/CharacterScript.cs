@@ -7,8 +7,7 @@ public class CharacterScript : MonoBehaviour {
     void Start() {
         player = GameObject.Find("CharacterPlayer");
         ambientSound = GetComponent<AudioSource>();
-        GameState.Subscribe(nameof(GameState.ambientVolume), OnAmbientVolumeChanged);
-        GameState.Subscribe(nameof(GameState.isMuted), OnMuteChanged);
+        GameState.Subscribe(OnAmbientVolumeChanged, nameof(GameState.ambientVolume), nameof(GameState.isMuted));
         OnAmbientVolumeChanged();
     }
     void Update() {
@@ -16,9 +15,5 @@ public class CharacterScript : MonoBehaviour {
         player.transform.localPosition = Vector3.zero;
     }
     private void OnAmbientVolumeChanged() => ambientSound.volume = GameState.isMuted ? 0.0f : GameState.ambientVolume;
-    private void OnMuteChanged() => ambientSound.volume = GameState.isMuted ? 0.0f : GameState.ambientVolume;
-    private void OnDestroy() {
-        GameState.Unsubscribe(nameof(GameState.ambientVolume), OnAmbientVolumeChanged);
-        GameState.Unsubscribe(nameof(GameState.isMuted), OnMuteChanged);
-    }
+    private void OnDestroy() => GameState.Unsubscribe(OnAmbientVolumeChanged, nameof(GameState.ambientVolume), nameof(GameState.isMuted));
 }

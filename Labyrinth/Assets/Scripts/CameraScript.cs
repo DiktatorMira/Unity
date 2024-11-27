@@ -7,13 +7,15 @@ public class CameraScript : MonoBehaviour {
     private InputAction lookAction;
     private Vector3 c;
     private bool fpv = true;
-    private float mX, mY, sensitivityX = 3.5f, sensitivityY = 3.5f, sensitivityW = 0.35f, fpvRange = 0.6f, maxDistance = 5.0f;
+    private float mX, mY, sensitivityX, sensitivityY, sensitivityW = 0.35f, fpvRange = 0.6f, maxDistance = 5.0f;
     
     void Start() {
         c = transform.position - player.transform.position;
         mX = transform.eulerAngles.y;
         mY = transform.eulerAngles.x;
         lookAction = InputSystem.actions.FindAction("Look");
+        GameState.Subscribe(OnSensitivityChanged, nameof(GameState.sensitivityLookX), nameof(GameState.sensitivityLookY));
+        OnSensitivityChanged();
     }
     void Update() {
         if (fpv) {
@@ -51,4 +53,9 @@ public class CameraScript : MonoBehaviour {
     void LateUpdate() {
         if (fpv) transform.position = Quaternion.Euler(0, mX, 0) * c + player.transform.position;
     }
+    private void OnSensitivityChanged() {
+        sensitivityX = Mathf.Lerp(1, 20, GameState.sensitivityLookX);
+        sensitivityY = Mathf.Lerp(1, 20, GameState.sensitivityLookY);
+    }
+    private void OnDestroy() => GameState.Unsubscribe(OnSensitivityChanged, nameof(GameState.sensitivityLookX), nameof(GameState.sensitivityLookY));
 }

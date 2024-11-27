@@ -8,7 +8,7 @@ public class GameState {
     public static bool isNight { get; set; }
     public static float flashCharge { get; set; }
 
-    private static float effectsvolume = 1.0f, ambientvolume = 1.0f;
+    private static float effectsvolume = 1.0f, ambientvolume = 1.0f, sensitivityx = 3.5f, sensitivityy = 3.5f;
     private static bool ismuted = false;
     public static float effectsVolume {
         get => effectsvolume;
@@ -34,6 +34,25 @@ public class GameState {
             if (ismuted != value) {
                 ismuted = value;
                 Notify(nameof(isMuted));
+                Notify(nameof(effectsVolume));
+            }
+        }
+    }
+    public static float sensitivityLookX {
+        get => sensitivityx;
+        set {
+            if (sensitivityx != value) {
+                sensitivityx = value;
+                Notify(nameof(sensitivityLookX));
+            }
+        }
+    }
+    public static float sensitivityLookY {
+        get => sensitivityy;
+        set {
+            if (sensitivityy != value)  {
+                sensitivityy = value;
+                Notify(nameof(sensitivityLookY));
             }
         }
     }
@@ -41,11 +60,17 @@ public class GameState {
     private static void Notify(string propertyName) {
         if (subscribers.ContainsKey(propertyName)) subscribers[propertyName].ForEach(action => action());
     }
-    public static void Subscribe(string propertyName, Action action) {
-        if (!subscribers.ContainsKey(propertyName)) subscribers[propertyName] = new List<Action>();
-        subscribers[propertyName].Add(action);
+    public static void Subscribe(Action action, params string[] propertyNames) {
+        if (propertyNames.Length == 0) throw new ArgumentException($"{ nameof(propertyNames) } must have at least 1 value");
+        foreach (var propertyName in propertyNames) {
+            if (!subscribers.ContainsKey(propertyName)) subscribers[propertyName] = new List<Action>();
+            subscribers[propertyName].Add(action);
+        }
     }
-    public static void Unsubscribe(string propertyName, Action action) {
-        if (subscribers.ContainsKey(propertyName)) subscribers[propertyName].Remove(action);
+    public static void Unsubscribe(Action action, params string[] propertyNames) {
+        if (propertyNames.Length == 0) throw new ArgumentException($"{nameof(propertyNames)} must have at least 1 value");
+        foreach (var propertyName in propertyNames) {
+            if (subscribers.ContainsKey(propertyName)) subscribers[propertyName].Remove(action);
+        }
     }
 }

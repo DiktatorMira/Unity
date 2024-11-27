@@ -9,6 +9,10 @@ public class ToastScript : MonoBehaviour {
     private static ToastScript instance;
     private static float showTime;
     private static readonly LinkedList<ToastMessage> toastMessages = new LinkedList<ToastMessage>();
+    private class ToastMessage {
+        public string message;
+        public float timeout;
+    }
 
     public static void ShowToast(string message, float? timeout = null) {
         if (toastMessages.Count > 0 && toastMessages.Last.Value.message == message) message += "2";
@@ -34,10 +38,5 @@ public class ToastScript : MonoBehaviour {
             showTime = toastMessages.First.Value.timeout;
             content.SetActive(true);
         }
-    }
-
-    private class ToastMessage {
-        public string message;
-        public float timeout;
     }
 }

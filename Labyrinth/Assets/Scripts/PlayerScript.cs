@@ -11,7 +11,7 @@ public class NewMonoBehaviourScript : MonoBehaviour {
         moveAction = InputSystem.actions.FindAction("Move");
         rb = GetComponent<Rigidbody>();
         audioSources = GetComponents<AudioSource>();
-        GameState.Subscribe(nameof(GameState.effectsVolume), OnEffectsVolumeChanged);
+        GameState.Subscribe(OnEffectsVolumeChanged, nameof(GameState.effectsVolume));
         OnEffectsVolumeChanged();
     }
     void Update() {
@@ -37,7 +37,7 @@ public class NewMonoBehaviourScript : MonoBehaviour {
         }
     }
     private void OnEffectsVolumeChanged() {
-        foreach (var audioSource in audioSources) audioSource.volume = GameState.effectsVolume;
+        foreach (var audioSource in audioSources) audioSource.volume = GameState.isMuted ? 0.0f : GameState.effectsVolume;
     }
-    private void OnDestroy() => GameState.Unsubscribe(nameof(GameState.effectsVolume), OnEffectsVolumeChanged);
+    private void OnDestroy() => GameState.Unsubscribe(OnEffectsVolumeChanged, nameof(GameState.effectsVolume));
 }

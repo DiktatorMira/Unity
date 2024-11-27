@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class DoorScript : MonoBehaviour {
         isOpen = false;
         openTime = 0.0f;
         audioSources = GetComponents<AudioSource>();
+        GameState.Subscribe(OnEffectsVolumeChanged, nameof(GameState.effectsVolume));
+        OnEffectsVolumeChanged();
     }
     void Update() {
         if (openTime > 0.0f && !isLocked && !isOpen) {
@@ -31,4 +34,8 @@ public class DoorScript : MonoBehaviour {
             audioSources[0].Play();
         }
     }
+    public void OnEffectsVolumeChanged() {
+        foreach (var audioSource in audioSources) audioSource.volume = GameState.isMuted ? 0.0f : GameState.effectsVolume;
+    }
+    private void OnDestroy() => GameState.Unsubscribe(OnEffectsVolumeChanged, nameof(GameState.effectsVolume));
 }
