@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 
 public class GameState {
-    public static Dictionary<string, bool> collectedKeys { get; } = new Dictionary<string, bool>();
-    private static readonly Dictionary<string, List<Action>> subscribers = new Dictionary<string, List<Action>>();
+    public static Dictionary<string, bool> collectedKeys { get; } = new();
+    private static readonly Dictionary<string, List<Action>> subscribers = new();
+    private static Dictionary<string, List<Action<string, object>>> eventListeners = new();
     public static bool isFpv { get; set; }
     public static bool isNight { get; set; }
-    public static float flashCharge { get; set; }
 
     private static float effectsvolume = 1.0f, ambientvolume = 1.0f, sensitivityx = 3.5f, sensitivityy = 3.5f;
     private static bool ismuted = false;
@@ -57,6 +57,36 @@ public class GameState {
         }
     }
 
+    public static void TriggerKeyEvent(string keyName, bool isInTime) {
+        var payload = new Dictionary<string, object> {
+            { "KeyName", keyName },
+            { "IsInTime", isInTime }
+        };
+        TriggerEvent("KeyCollected", payload);
+    }
+    public static void TriggerEvent(string type, object payload = null) {
+        if (eventListeners.ContainsKey(type)) {
+            foreach (var eventListener in eventListeners[type]) eventListener(type, payload);
+        } if (eventListeners.ContainsKey("Broadcast")) {
+            foreach (var eventListener in eventListeners["Broadcast"]) eventListener(type, payload);
+        }
+    }
+    public static void SubscribeTrigger(Action<string, object> action, params string[] types) {
+        if (types.Length == 0) types = new string[1] { "Broadcast" };
+        foreach (var type in types) {
+            if (!eventListeners.ContainsKey(type)) eventListeners[type] = new List<Action<string, object>>();
+            eventListeners[type].Add(action);
+        }
+    }
+    public static void UnsubscribeTrigger(Action<string, object> action, params string[] types) {
+        if (types.Length == 0) types = new string[1] { "Broadcast" };
+        foreach (var type in types) {
+            if (!eventListeners.ContainsKey(type)) {
+                eventListeners[type].Remove(action);
+                if (eventListeners[type].Count == 0) eventListeners.Remove(type);
+            }
+        }
+    }
     private static void Notify(string propertyName) {
         if (subscribers.ContainsKey(propertyName)) subscribers[propertyName].ForEach(action => action());
     }

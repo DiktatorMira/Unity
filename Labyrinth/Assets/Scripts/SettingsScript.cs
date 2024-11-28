@@ -13,7 +13,7 @@ public class SettingsScript : MonoBehaviour {
     private Toggle muteToggle;
     private List<object> defalutValues = new List<object>();
 
-    void Start() {
+    private void Start() {
         content = transform.Find("Content").gameObject;
 
         muteToggle = transform.Find("Content").Find("SoundsToggle").GetComponent<Toggle>();
@@ -53,7 +53,7 @@ public class SettingsScript : MonoBehaviour {
 
         Time.timeScale = content.activeInHierarchy ? 0.0f : 1.0f;
     }
-    void Update() {
+    private void Update() {
         if (Input.GetKeyUp(KeyCode.Escape)) OnCloseButtonClick();
     }
     public void OnCloseButtonClick() {

@@ -9,7 +9,7 @@ public class CameraScript : MonoBehaviour {
     private bool fpv = true;
     private float mX, mY, sensitivityX, sensitivityY, sensitivityW = 0.35f, fpvRange = 0.6f, maxDistance = 5.0f;
     
-    void Start() {
+    private void Start() {
         c = transform.position - player.transform.position;
         mX = transform.eulerAngles.y;
         mY = transform.eulerAngles.x;
@@ -17,7 +17,7 @@ public class CameraScript : MonoBehaviour {
         GameState.Subscribe(OnSensitivityChanged, nameof(GameState.sensitivityLookX), nameof(GameState.sensitivityLookY));
         OnSensitivityChanged();
     }
-    void Update() {
+    private void Update() {
         if (fpv) {
             Vector2 mouseWheel = Input.mouseScrollDelta * Time.timeScale;
             if (mouseWheel.y != 0) {
@@ -50,7 +50,7 @@ public class CameraScript : MonoBehaviour {
             }
         }
     }
-    void LateUpdate() {
+    private void LateUpdate() {
         if (fpv) transform.position = Quaternion.Euler(0, mX, 0) * c + player.transform.position;
     }
     private void OnSensitivityChanged() {

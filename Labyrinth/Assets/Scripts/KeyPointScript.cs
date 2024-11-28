@@ -8,7 +8,10 @@ public class KeyPointScript : MonoBehaviour {
         get => iskeygot; 
         set {
             iskeygot = value;
-            if (value) GameState.collectedKeys.Add(keyName, isInTime); 
+            if (value) {
+                GameState.collectedKeys.Add(keyName, isInTime);
+                GameState.TriggerKeyEvent(keyName, isInTime);
+            }
         } 
     }
 }

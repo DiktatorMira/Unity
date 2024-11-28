@@ -7,14 +7,14 @@ public class NewMonoBehaviourScript : MonoBehaviour {
     private Rigidbody rb;
     private AudioSource[] audioSources;
 
-    void Start() {
+    private void Start() {
         moveAction = InputSystem.actions.FindAction("Move");
         rb = GetComponent<Rigidbody>();
         audioSources = GetComponents<AudioSource>();
         GameState.Subscribe(OnEffectsVolumeChanged, nameof(GameState.effectsVolume));
         OnEffectsVolumeChanged();
     }
-    void Update() {
+    private void Update() {
         Vector3 forward = Camera.main.transform.forward, right = Camera.main.transform.right;
         forward.y = 0.0f; 
         forward.Normalize();

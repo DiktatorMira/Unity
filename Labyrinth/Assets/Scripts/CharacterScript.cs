@@ -4,13 +4,13 @@ public class CharacterScript : MonoBehaviour {
     private GameObject player;
     private AudioSource ambientSound;
 
-    void Start() {
+    private void Start() {
         player = GameObject.Find("CharacterPlayer");
         ambientSound = GetComponent<AudioSource>();
         GameState.Subscribe(OnAmbientVolumeChanged, nameof(GameState.ambientVolume), nameof(GameState.isMuted));
         OnAmbientVolumeChanged();
     }
-    void Update() {
+    private void Update() {
         transform.position = player.transform.position;
         player.transform.localPosition = Vector3.zero;
     }

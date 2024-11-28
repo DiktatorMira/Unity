@@ -5,14 +5,14 @@ public class LightScript : MonoBehaviour {
     [SerializeField] private Material daySkybox, nightSkybox;
     private List<Light> nightLights, dayLights;
 
-    void Start() {
+    private void Start() {
         nightLights = new List<Light>();
         dayLights = new List<Light>();
         foreach (var gameObject in GameObject.FindGameObjectsWithTag("NightLight")) nightLights.Add(gameObject.GetComponent<Light>());
         foreach (var gameObject in GameObject.FindGameObjectsWithTag("DayLight")) dayLights.Add(gameObject.GetComponent<Light>());
         GameState.isNight = nightLights[0].isActiveAndEnabled;
     }
-    void Update() {
+    private void Update() {
         if (Input.GetKeyDown(KeyCode.N)) {
             GameState.isNight = !GameState.isNight;
             RenderSettings.skybox = GameState.isNight ? nightSkybox : daySkybox;

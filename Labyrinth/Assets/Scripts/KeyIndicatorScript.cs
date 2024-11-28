@@ -8,14 +8,14 @@ public class KeyIndicatorScript : MonoBehaviour {
     private GameObject content;
     private KeyPointScript parentScript;
 
-    void Start() {
+    private void Start() {
         parentScript = transform.parent.GetComponent<KeyPointScript>();
         parentScript.isInTime = true;
         indicator = transform.Find("Content/Indicator").gameObject.GetComponent<Image>();
         content = transform.Find("Content").gameObject;
         content.SetActive(false);
     }
-    void Update() {
+    private void Update() {
         if (content.activeInHierarchy) {
             activeTime += Time.deltaTime;
             if (activeTime >= keyTimeout) {

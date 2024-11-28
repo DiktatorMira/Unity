@@ -7,7 +7,7 @@ public class DoorScript : MonoBehaviour {
     private float inTime = 2.0f, OutTime = 20.0f, openTime;
     private AudioSource[] audioSources;
 
-    void Start() {
+    private void Start() {
         isLocked = true;
         isOpen = false;
         openTime = 0.0f;
@@ -15,7 +15,7 @@ public class DoorScript : MonoBehaviour {
         GameState.Subscribe(OnEffectsVolumeChanged, nameof(GameState.effectsVolume));
         OnEffectsVolumeChanged();
     }
-    void Update() {
+    private void Update() {
         if (openTime > 0.0f && !isLocked && !isOpen) {
             openTime -= Time.deltaTime;
             transform.Translate(Time.deltaTime / openTime * Vector3.up);
