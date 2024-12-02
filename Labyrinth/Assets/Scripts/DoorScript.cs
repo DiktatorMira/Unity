@@ -23,7 +23,7 @@ public class DoorScript : MonoBehaviour {
         }
     }
     private void OnCollisionEnter(Collision collision) {
-        if (GameState.collectedKeys.Keys.Contains("1")) {
+        if (GameState.collectedKeys.Keys.Contains("1") && isLocked) {
             bool isInTime = GameState.collectedKeys["1"];
             openTime = isInTime ? inTime : OutTime;
             isLocked = false;

@@ -42,9 +42,9 @@ public class ToastScript : MonoBehaviour {
         });
     }
     private void BroadCastListener(string type, object payload) {
-        string[] toastedTypes = { "Battery", "KeyCollected" };
+        string[] toastedTypes = { "Battery", "1", "2" };
         if (toastedTypes.Contains(type)) {
-            if (type == "KeyCollected" && payload is Dictionary<string, object> keyData) {
+            if ((type == "1" || type == "2") && payload is Dictionary<string, object> keyData) {
                 string keyName = keyData.ContainsKey("KeyName") ? keyData["KeyName"].ToString() : "Unknown";
                 bool isInTime = keyData.ContainsKey("IsInTime") && (bool)keyData["IsInTime"];
                 ShowToast($"Ключ {keyName} найден {(isInTime ? "вовремя" : "поздно")}", 1.5f);

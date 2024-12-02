@@ -62,7 +62,7 @@ public class GameState {
             { "KeyName", keyName },
             { "IsInTime", isInTime }
         };
-        TriggerEvent("KeyCollected", payload);
+        TriggerEvent(keyName, payload);
     }
     public static void TriggerEvent(string type, object payload = null) {
         if (eventListeners.ContainsKey(type)) {

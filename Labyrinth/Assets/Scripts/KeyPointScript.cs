@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class KeyPointScript : MonoBehaviour {
-    [SerializeField] private string keyName = "1";
+    [SerializeField] private string keyName;
     public bool isInTime { get; set; }
     private bool iskeygot;
     public bool isKeyGot {
