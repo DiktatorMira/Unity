@@ -7,7 +7,7 @@ public class ToastScript : MonoBehaviour {
     [SerializeField] private TMPro.TextMeshProUGUI toastTMP;
     [SerializeField] private GameObject content;
     private static ToastScript instance;
-    private static float showTime;
+    private static float showTime = 0.0f;
     private static readonly LinkedList<ToastMessage> toastMessages = new LinkedList<ToastMessage>();
 
     private class ToastMessage {
@@ -35,7 +35,7 @@ public class ToastScript : MonoBehaviour {
         }
     }
     public static void ShowToast(string message, float? timeout = null) {
-        if (toastMessages.Count > 0 && toastMessages.Last.Value.message == message) message += "2";
+        if (toastMessages.Count > 0 && toastMessages.Last.Value.message == message) return;
         toastMessages.AddLast(new ToastMessage {
             message = message,
             timeout = timeout ?? instance.timeout
@@ -53,6 +53,7 @@ public class ToastScript : MonoBehaviour {
                 ShowToast($"Заряд пополнен на {chargePercent}%");
             }
         }
+        if (payload is TriggerPayload triggerPayload && triggerPayload.notification != null) ShowToast(triggerPayload.notification);
     }
     private void OnDestroy() => GameState.UnsubscribeTrigger(BroadCastListener);
 }

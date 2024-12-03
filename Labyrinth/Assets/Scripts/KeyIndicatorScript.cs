@@ -17,13 +17,17 @@ public class KeyIndicatorScript : MonoBehaviour {
     }
     private void Update() {
         if (content.activeInHierarchy) {
-            activeTime += Time.deltaTime;
+            activeTime += Time.deltaTime * (GameState.difficutly switch {
+                GameState.GameDifficulty.Easy => 0.5f,
+                GameState.GameDifficulty.Hard => 1.5f,
+                _ => 1.0f
+            });
             if (activeTime >= keyTimeout) {
                 parentScript.isInTime = false;
                 gameObject.SetActive(false);
             } else {
                 indicator.fillAmount = (keyTimeout - activeTime) / keyTimeout;
-                indicator.color = new Color(1 - indicator.fillAmount, indicator.fillAmount, 0.2f, 0.75f);
+                indicator.color = new Color(1 - indicator.fillAmount, indicator.fillAmount, 0.2f, 0.5f);
             }
         }
         if (parentScript.isKeyGot) Destroy(gameObject);

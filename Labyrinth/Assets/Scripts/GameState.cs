@@ -1,15 +1,21 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 public class GameState {
     public static Dictionary<string, bool> collectedKeys { get; } = new();
     private static readonly Dictionary<string, List<Action>> subscribers = new();
     private static Dictionary<string, List<Action<string, object>>> eventListeners = new();
+    public enum GameDifficulty {
+        Easy, Middle, Hard
+    }
     public static bool isFpv { get; set; }
     public static bool isNight { get; set; }
 
     private static float effectsvolume = 1.0f, ambientvolume = 1.0f, sensitivityx = 3.5f, sensitivityy = 3.5f;
+    private static GameDifficulty difficult = GameDifficulty.Middle;
     private static bool ismuted = false;
+    private static int _score = 0;
     public static float effectsVolume {
         get => effectsvolume;
         set {
@@ -56,19 +62,34 @@ public class GameState {
             }
         }
     }
-
-    public static void TriggerKeyEvent(string keyName, bool isInTime) {
-        var payload = new Dictionary<string, object> {
-            { "KeyName", keyName },
-            { "IsInTime", isInTime }
-        };
-        TriggerEvent(keyName, payload);
+    public static GameDifficulty difficutly {
+        get => difficult;
+        set {
+            if (difficult != value) {
+                difficult = value;
+                Notify(nameof(difficult));
+            }
+        }
+    }
+    public static int score {
+        get => _score;
+        set {
+            if (_score != value) {
+                _score = value;
+                Notify(nameof(score));
+            }
+        }
     }
     public static void TriggerEvent(string type, object payload = null) {
         if (eventListeners.ContainsKey(type)) {
-            foreach (var eventListener in eventListeners[type]) eventListener(type, payload);
-        } if (eventListeners.ContainsKey("Broadcast")) {
-            foreach (var eventListener in eventListeners["Broadcast"]) eventListener(type, payload);
+            lock (eventListeners[type]) {
+                foreach (var eventListener in eventListeners[type]) eventListener(type, payload);
+            }
+        }
+        if (eventListeners.ContainsKey("Broadcast")) {
+            lock (eventListeners) {
+                foreach (var eventListener in eventListeners["Broadcast"]) eventListener(type, payload);
+            }
         }
     }
     public static void SubscribeTrigger(Action<string, object> action, params string[] types) {
