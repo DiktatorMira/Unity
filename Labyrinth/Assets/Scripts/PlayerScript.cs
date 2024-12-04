@@ -23,8 +23,11 @@ public class NewMonoBehaviourScript : MonoBehaviour {
 
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
         Vector3 moveDirection = right * moveValue.x + forward * moveValue.y;
-        moveDirection.Normalize(); 
-        rb.AddForce(moveDirection * forceFactor, ForceMode.Force);
+        moveDirection.Normalize();
+
+        if (Input.GetKey(KeyCode.Keypad8)) moveDirection += Time.deltaTime * 60 * forward;
+        float myH = Input.GetAxis("Horizontal");
+        rb.AddForce(moveDirection * myH * forceFactor, ForceMode.Force);
     }
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Wall") && !audioSources[0].isPlaying) audioSources[0].Play();
