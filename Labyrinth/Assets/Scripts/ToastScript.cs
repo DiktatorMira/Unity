@@ -35,6 +35,7 @@ public class ToastScript : MonoBehaviour {
         }
     }
     public static void ShowToast(string message, float? timeout = null) {
+        if (instance == null) return;
         if (toastMessages.Count > 0 && toastMessages.Last.Value.message == message) return;
         toastMessages.AddLast(new ToastMessage {
             message = message,

@@ -2,14 +2,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 
 public class DisplayScriipt : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI clock;
     private TextMeshProUGUI scoreTMP;
     private List<Image> keyImages = new();
     private float gameTime;
-
     private void Start() {
         gameTime = 0.0f;
         clock = transform.Find("Content/Background/ClockTMP").GetComponent<TextMeshProUGUI>();
@@ -27,7 +25,7 @@ public class DisplayScriipt : MonoBehaviour {
         clock.text = $"{hour:D2}:{min:D2}:{sec:D2}";
     }
     private void BroadcastTriggerListener(string type, object payload) {
-        keyImages[int.Parse(type) - 1].enabled = true;
+        if (int.TryParse(type, out int keyIndex) && keyIndex >= 1 && keyIndex <= 2) keyImages[keyIndex - 1].enabled = true;
     }
     private void OnDestroy() => GameState.UnsubscribeTrigger(BroadcastTriggerListener);
 }

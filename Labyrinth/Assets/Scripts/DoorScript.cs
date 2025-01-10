@@ -16,7 +16,7 @@ public class DoorScript : MonoBehaviour {
         GameState.Subscribe(OnEffectsVolumeChanged, nameof(GameState.effectsVolume));
         OnEffectsVolumeChanged();
     }
-    private void Update() {
+    private void Update(){
         if (openTime > 0.0f && !isLocked && !isOpen) {
             openTime -= Time.deltaTime;
             transform.Translate(Time.deltaTime / openTime * Vector3.up);
@@ -24,22 +24,23 @@ public class DoorScript : MonoBehaviour {
         }
     }
     private void OnCollisionEnter(Collision collision) {
-        if (GameState.collectedKeys.Keys.Contains(keyName) && isLocked) {
+        if (GameState.collectedKeys.ContainsKey(keyName) && isLocked) {
             bool isInTime = GameState.collectedKeys[keyName];
             openTime = (isInTime ? inTime : OutTime) * (GameState.difficutly switch {
                 GameState.GameDifficulty.Easy => 0.5f,
                 GameState.GameDifficulty.Hard => 1.5f,
                 _ => 1.0f
             });
-            GameState.TriggerEvent("Door", new TriggerPayload() {
-                notification = $"Ключ \"{keyName}\" открыл",
+            GameState.TriggerEvent("Door", new TriggerPayload {
+                notification = $"Дверь открыта ключом \"{keyName}\"",
                 payload = "Открыто"
             });
             isLocked = false;
-            (isInTime ? audioSources[1] : audioSources[2]).Play();
+            if (isInTime) audioSources[1].Play();
+            else audioSources[2].Play();
         } else {
-            GameState.TriggerEvent("Door", new TriggerPayload() {
-                notification = $"Для этой вери необходим ключ \"{keyName}\"",
+            GameState.TriggerEvent("Door", new TriggerPayload {
+                notification = $"Для этой двери необходим ключ \"{keyName}\"",
                 payload = "Закрыто"
             });
             audioSources[0].Play();
@@ -48,5 +49,7 @@ public class DoorScript : MonoBehaviour {
     public void OnEffectsVolumeChanged() {
         foreach (var audioSource in audioSources) audioSource.volume = GameState.isMuted ? 0.0f : GameState.effectsVolume;
     }
-    private void OnDestroy() => GameState.Unsubscribe(OnEffectsVolumeChanged, nameof(GameState.effectsVolume));
+    private void OnDestroy() {
+        GameState.Unsubscribe(OnEffectsVolumeChanged, nameof(GameState.effectsVolume));
+    }
 }

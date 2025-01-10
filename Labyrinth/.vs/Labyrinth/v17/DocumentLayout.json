@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\Labyrinth\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CBEE44B2-AC02-2D81-086E-310C52B2BE1D}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\\u043C\u043E\u044F \u0431\u0430\u0437\u0430\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\unity\\labyrinth\\assets\\scripts\\playerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBEE44B2-AC02-2D81-086E-310C52B2BE1D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBEE44B2-AC02-2D81-086E-310C52B2BE1D}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\\u043C\u043E\u044F \u0431\u0430\u0437\u0430\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\unity\\labyrinth\\assets\\scripts\\doorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBEE44B2-AC02-2D81-086E-310C52B2BE1D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\doorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBEE44B2-AC02-2D81-086E-310C52B2BE1D}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\\u043C\u043E\u044F \u0431\u0430\u0437\u0430\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\unity\\labyrinth\\assets\\scripts\\characterscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBEE44B2-AC02-2D81-086E-310C52B2BE1D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBEE44B2-AC02-2D81-086E-310C52B2BE1D}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\\u043C\u043E\u044F \u0431\u0430\u0437\u0430\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\unity\\labyrinth\\assets\\scripts\\displayscriipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBEE44B2-AC02-2D81-086E-310C52B2BE1D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\displayscriipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBEE44B2-AC02-2D81-086E-310C52B2BE1D}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\\u043C\u043E\u044F \u0431\u0430\u0437\u0430\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\unity\\labyrinth\\assets\\scripts\\keyindicatorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBEE44B2-AC02-2D81-086E-310C52B2BE1D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\keyindicatorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,41 +94,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CharacterScript.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\Labyrinth\\Assets\\Scripts\\CharacterScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterScript.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\Labyrinth\\Assets\\Scripts\\CharacterScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CharacterScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T11:23:50.121Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlayerScript.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\Labyrinth\\Assets\\Scripts\\PlayerScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScript.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\Labyrinth\\Assets\\Scripts\\PlayerScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAoAAAAAAAAAA==",
+              "Title": "DoorScript.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\Labyrinth\\Assets\\Scripts\\DoorScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DoorScript.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\Labyrinth\\Assets\\Scripts\\DoorScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DoorScript.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA1wCMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T11:24:16.937Z",
+              "WhenOpened": "2025-01-10T08:46:56.599Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DisplayScriipt.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\Labyrinth\\Assets\\Scripts\\DisplayScriipt.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\DisplayScriipt.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\Labyrinth\\Assets\\Scripts\\DisplayScriipt.cs",
-              "RelativeToolTip": "Assets\\Scripts\\DisplayScriipt.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABHAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "KeyIndicatorScript.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\Labyrinth\\Assets\\Scripts\\KeyIndicatorScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\KeyIndicatorScript.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\Unity\\Labyrinth\\Assets\\Scripts\\KeyIndicatorScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\KeyIndicatorScript.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T07:02:41.42Z",
+              "WhenOpened": "2025-01-10T08:44:27.376Z",
               "EditorCaption": ""
             }
           ]
